@@ -1,14 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, Button} from 'react-native';
+import { withNavigation } from 'react-navigation';
+import EmergencyScreen from './EmergencyScreen';
 
-const HelpScreen = () => {
+const HelpScreen = ({navigation}) => {
 	return(
     <View>
-    <Text>HelpScreen</Text>
+    <View style={{marginBottom: 20}}>
+    <Text>Emergency Contact 1</Text>
+    <Text>Emergency Contact 2</Text>
+    <Text>Emergency Contact 3</Text>
+    <Text>Emergency Contact 4</Text>
+    <Text>Emergency Contact 5</Text>
+    </View>
+    <Button title="Emergency" onPress={()=> navigation.navigate('Emergency',{screen : 'EmergencyScreen'})} />
     </View>
 	);
 }
 
 const styles = StyleSheet.create({});
 
-export default HelpScreen;
+export default withNavigation(HelpScreen);

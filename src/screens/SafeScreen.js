@@ -1,14 +1,33 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import MapView from 'react-native-maps';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
-const SafeScreen = () => {
-	return(
-    <View>
-    <Text>SafeScreen</Text>
-    </View>
-	);
+export default class App extends React.Component {
+  render() {
+    return (
+      <View>
+      <View style={styles.main}>
+        <Text>You Are Safe !!!</Text>
+        </View>
+      <View style={styles.container}>
+        <MapView style={styles.mapStyle} />
+      </View>
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create({});
-
-export default SafeScreen;
+const styles = StyleSheet.create({
+  main:{
+   marginBottom:50 
+  },
+  container: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mapStyle: {
+    width: 400,
+    height: 530,
+  },
+});

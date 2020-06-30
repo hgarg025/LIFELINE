@@ -6,6 +6,7 @@ import SafeScreen from './SafeScreen';
 import FogScreen from './FogScreen';
 import HelpScreen from './HelpScreen';
 import MetricsScreen from './MetricsScreen';
+import EmergencyScreen from './EmergencyScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,6 +17,7 @@ function MyTabs() {
       <Tab.Screen name="Fog" component={FogScreen} />
       <Tab.Screen name="Help" component={HelpScreen} />
       <Tab.Screen name="Metrics" component={MetricsScreen} />
+      <Tab.Screen name="Emergency" component={EmergencyScreen} />
     </Tab.Navigator>
   );
 }

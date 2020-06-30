@@ -11,7 +11,7 @@ const LoginScreen = ({navigation}) => {
     <TextInput placeholder='Enter your Password'  />
     <Button title="Sign In" onPress={()=> navigation.navigate('Home')} />
     <Text>Not a User</Text>
-    <Button title="Sign Up" />
+    <Button title="Sign Up" onPress={()=> navigation.navigate('SignUp')} />
     </View>
 	);
 }
